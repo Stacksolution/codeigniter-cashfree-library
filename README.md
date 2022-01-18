@@ -12,7 +12,12 @@ such old versions of PHP, because of potential security and performance
 issues, as well as missing features.
 
 #Installation
-
+`$this->load->library('cashfree/Cashfree','cashfree');
+ $config['cashfree_mode']       = 'production';
+ $config['cashfree_app_id']     = $this->data['config']['cashfree_app_id'];
+ $config['cashfree_app_secret'] = $this->data['config']['cashfree_app_secret'];
+ $this->cashfree->initialize($config);
+ $responce = $this->cashfree->_create_order($order_id,$amount);`
 
 #Full impliment Blogs
 
